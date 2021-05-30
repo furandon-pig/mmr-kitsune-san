@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>セリフ書き込みアプリ</title>
+    <style>
+      .row { margin-top: 4px; }
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.4.0/fabric.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+  </head>
+  <body>
+    <div id="app">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">セリフ書き込みアプリ</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="#about" data-toggle="modal" data-target="#modal1">about</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div style="margin-top:70px;"></div>
+      <div class="container theme-showcase" role="main">
+        <div class="row"> 
+          <div class="col-md-9"> 
+            <div class="input-group">
+              <span class="input-group-addon" id="sizing-addon1">テキスト</span>
+              <input type="text" class="form-control" placeholder="セリフを入力してください" aria-describedby="sizing-addon1" v-model="msg">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="button" v-on:click="add_msg">追加</button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="row"> 
+          <div class="col-md-9"> 
+            <canvas id="cvs" style="margin-top: 10px; border: thin solid;"></canvas><br>
+            [<a v-on:click="download">画像をダウンロードする</a>]
+            <img id="bg" style="visibility:hidden; display:none;" />
+          </div>
+        </div>
+        <div class="row"> 
+          <div class="col-md-9"> 
+            <h3>使い方</h3>
+            <ul>
+              <li>「テキスト」にセリフとして書き込みたい文書を入力し、「追加」ボタンを押します。
+              <li>画像の中にセリフが作成されるので、任意の位置への移動やサイズ変更して配置を調整します。
+                <ul>
+                  <li>不要なセリフは選択状態にしてダブルクリックすることで削除できます。
+                </ul>
+              <li>一通りセリフを作成し終えたら、「画像をダウンロードする」をクリックしてください。PCに画像がダウンロードされます。
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- modal dislogs -->
+      <div id="modal1" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">セリフ書き込みアプリについて</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                吹き出しに好きなセリフを書き込むことができるアプリです。<br>
+                「画像をダウンロードする」をクリックするとセリフを書き込んだ画像をダウンロードできます。
+              </p>
+              <p>
+                GitHub:&nbsp;<a href="https://github.com/furandon-pig/mmr-kitsune-san" target="_blank">furandon-pig/mmr-kitsune-san</a>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- <div id="app"> -->
+    <script src="app.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </body>
+</html>
+
