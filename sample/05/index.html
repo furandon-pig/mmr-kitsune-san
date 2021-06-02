@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fabric.jsサンプル05</title>
+    <style>
+      .row { margin-top: 4px; }
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.4.0/fabric.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+  </head>
+  <body>
+    <div id="app">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Fabric.jsサンプル05</a>
+          </div>
+        </div>
+      </nav>
+      <div style="margin-top:70px;"></div>
+      <div class="container theme-showcase" role="main">
+        <div class="row"> 
+          <div class="col-md-9"> 
+            <canvas id="cvs" width="640" height="480" style="margin-top: 10px; border: thin solid;"></canvas><br>
+            <img id="bg" stc="https://upload.wikimedia.org/wikipedia/commons/9/92/Nyctereutes_procyonoides_16072008.jpg" style="visibility:hidden; display:none;" />
+          </div>
+          <div class="col-md-3"> 
+            <button class="btn btn-default" v-on:click="circle" style="margin-top: 4px; width:100%;">firbric.Circle</button><br>
+            <button class="btn btn-default" v-on:click="ellipse" style="margin-top: 4px; width:100%;">firbric.Ellipse</button><br>
+            <button class="btn btn-default" v-on:click="line" style="margin-top: 4px; width:100%;">firbric.Line</button><br>
+            <button class="btn btn-default" v-on:click="polygon" style="margin-top: 4px; width:100%;">firbric.Polygon</button><br>
+            <button class="btn btn-default" v-on:click="polyline" style="margin-top: 4px; width:100%;">firbric.Polyline</button><br>
+            <button class="btn btn-default" v-on:click="rect" style="margin-top: 4px; width:100%;">firbric.Rect</button><br>
+            <button class="btn btn-default" v-on:click="triangle" style="margin-top: 4px; width:100%;">firbric.Triangle</button><br>
+            <button class="btn btn-default" v-on:click="text" style="margin-top: 4px; width:100%;">firbric.Text</button><br>
+            <button class="btn btn-default" v-on:click="image" style="margin-top: 4px; width:100%;">firbric.Image</button><br>
+          </div>
+        </div>
+        <div class="row"> 
+          <div class="col-md-9"> 
+            <p>
+              <ul>
+                <li><a href="http://fabricjs.com/docs/fabric.Circle.html" target="_blank">fabric.Circle</a>
+                <li><a href="http://fabricjs.com/docs/fabric.Ellipse.html" target="_blank">fabric.Ellipse</a>
+                <li><a href="http://fabricjs.com/docs/fabric.Line.html" target="_blank">fablic.Line</a>
+                <li><a href="http://fabricjs.com/docs/fabric.Polygon.html" target="_blank">fabric.Polygon</a>
+                <li><a href="http://fabricjs.com/docs/fabric.Rect.html" target="_blank">fabric.Rect</a>
+                <li><a href="http://fabricjs.com/docs/fabric.Triangle.html" target="_blank">fabric.Triangle</a>
+                <li><a href="https://stackoverflow.com/questions/18835580/how-to-draw-a-line-on-a-canvas-using-fabric-js" target="_blank">How to draw a line on a canvas using fabric.js</a>
+                <li><a href="https://www.geeksforgeeks.org/how-to-create-a-polyline-canvas-using-fabric-js/" target="_blank">How to create a polyline canvas using Fabric.js ?</a>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div> <!-- <div id="app"> -->
+    <script src="app.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </body>
+</html>
+
