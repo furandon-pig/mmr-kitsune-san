@@ -35,6 +35,10 @@ var vm = new Vue({
       case '1':
         image_url = 'img.jpg';
         break;
+      case '2':
+        // https://twitter.com/kona_matcha_/status/1394225536210149377
+        image_url = 'https://pbs.twimg.com/media/E1lIu_1VEAc6A0E?format=jpg&name=small';
+        break;
       default:
         image_url = 'img.jpg';
         break;
