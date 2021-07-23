@@ -6,6 +6,7 @@ var vm = new Vue({
     img: null,
     bg: null,
     delete_icon: null,
+    text_align: true,
   },
   created: function() {
   },
@@ -33,10 +34,18 @@ var vm = new Vue({
       switch (params.get('id')) {
       case '1':
         image_url = 'img.jpg';
+        this.text_align = true;
         break;
       case '2':
         // https://twitter.com/kona_matcha_/status/1394225536210149377
         image_url = 'https://pbs.twimg.com/media/E1lIu_1VEAc6A0E?format=jpg&name=small';
+        this.text_align = true;
+        break;
+      case '3':
+        // https://twitter.com/tomapri/status/1418543297039986691
+        image_url = 'img3.png';
+        this.text_align = false;
+        this.msg = "Tokyo2020 (^_^)/";
         break;
       default:
         image_url = 'img.jpg';
@@ -149,7 +158,7 @@ var vm = new Vue({
       }
     },
     add_msg: function() {
-      let virtical_msg = this.msg.split('').join("\n");
+      let virtical_msg = this.text_align ? this.msg.split('').join("\n") : this.msg ;
       let new_text = new fabric.Text(
         virtical_msg, {
           left: 100,
