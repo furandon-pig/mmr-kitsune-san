@@ -47,6 +47,12 @@ var vm = new Vue({
         this.text_align = false;
         this.msg = "Tokyo2020 (^_^)/";
         break;
+      case '4':
+        // https://twitter.com/GrayMelancholy/status/1570824367445258242
+        image_url = 'img4.jpg';
+        this.text_align = false;
+        this.msg = "";
+        break;
       default:
         image_url = 'img.jpg';
         break;
