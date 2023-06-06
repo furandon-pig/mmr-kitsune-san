@@ -53,6 +53,12 @@ var vm = new Vue({
         this.text_align = false;
         this.msg = "";
         break;
+      case '5':
+        // https://twitter.com/magaiakashi/status/1665999569648504832
+        image_url = 'img5.jpg';
+        this.text_align = true;
+        this.msg = "";
+        break;
       default:
         image_url = 'img.jpg';
         break;
