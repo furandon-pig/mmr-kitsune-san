@@ -75,7 +75,7 @@ var vm = new Vue({
         // https://x.com/REBHPortal/status/1843215460046872934
         image_url = 'img7.jpg';
         this.text_align = false;
-        this.msg = "";
+        this.msg = "かゆい　うま";
         this.color = 'white';
         break;
       default:
