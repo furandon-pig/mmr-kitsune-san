@@ -35,32 +35,52 @@ var vm = new Vue({
       case '1':
         image_url = 'img.jpg';
         this.text_align = true;
+        this.color = 'black';
         break;
       case '2':
         // https://twitter.com/kona_matcha_/status/1394225536210149377
         image_url = 'https://pbs.twimg.com/media/E1lIu_1VEAc6A0E?format=jpg&name=small';
         this.text_align = true;
+        this.color = 'black';
         break;
       case '3':
         // https://twitter.com/tomapri/status/1418543297039986691
         image_url = 'img3.png';
         this.text_align = false;
         this.msg = "Tokyo2020 (^_^)/";
+        this.color = 'black';
         break;
       case '4':
         // https://twitter.com/GrayMelancholy/status/1570824367445258242
         image_url = 'img4.jpg';
         this.text_align = false;
         this.msg = "";
+        this.color = 'black';
         break;
       case '5':
         // https://twitter.com/magaiakashi/status/1665999569648504832
         image_url = 'img5.jpg';
         this.text_align = true;
         this.msg = "";
+        this.color = 'black';
+        break;
+      case '6':
+        // https://twitter.com/magaiakashi/status/1665999569648504832
+        image_url = 'img6.png';
+        this.text_align = true;
+        this.msg = "";
+        this.color = 'black';
+        break;
+      case '7':
+        // https://x.com/REBHPortal/status/1843215460046872934
+        image_url = 'img7.jpg';
+        this.text_align = false;
+        this.msg = "";
+        this.color = 'white';
         break;
       default:
         image_url = 'img.jpg';
+        this.color = 'black';
         break;
       }
     } catch (e) {
@@ -176,7 +196,7 @@ var vm = new Vue({
           left: 100,
           top: 140,
           fontSize: 40,
-          fill: 'black',
+          fill: this.color,
           borderColor: 'blue',
           cornerStrokeColor: 'blue',
         }
